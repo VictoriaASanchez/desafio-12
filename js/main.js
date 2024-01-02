@@ -10,6 +10,7 @@ title.appendChild(createSpan);
 
 // EJERCICIO 3
 
+
 const arrayColors = ['#4A3D73', '#8475B3', '#F188A6', '#FFFFFF', '#FF0000'];
 
 
@@ -38,6 +39,16 @@ const circle1 = document.getElementById('circle-1');
 const circle2 = document.getElementById('circle-2');
 const circle3 = document.getElementById('circle-3');
 const circle4 = document.getElementById('circle-4');
+
+
+// Almacena los colores originales
+const initialState = {
+    circle1: circle1.style.backgroundColor = '#D2D2D2',
+    circle2: circle2.style.backgroundColor = '#D2D2D2',
+    circle3: circle3.style.backgroundColor = '#D2D2D2',
+    circle4: circle4.style.backgroundColor = '#D2D2D2'
+  };
+// --------------------------------------------------------- Button 'Reset'
 
 
 // Modo superpuesto activo
@@ -95,7 +106,6 @@ function fondo(circle) {
             circle.style.backgroundColor = arrayColors[3];
             break;
         default:
-
             break;
     }
 }
@@ -103,23 +113,15 @@ function fondo(circle) {
 
 // Button 'Reset'
 
-// Almacena los colores originales
-/* var originalColors = {
-    circle1: circle1.style.backgroundColor,
-    circle2: circle2.style.backgroundColor,
-    circle3: circle3.style.backgroundColor,
-    circle4: circle4.style.backgroundColor
-  };
-
-
 const btn = document.querySelector('button');
 
-btn.addEventListener('reset', function () {
-    circle1.style.backgroundColor = originalColors.circle1;
-    circle2.style.backgroundColor = originalColors.circle2;
-    circle3.style.backgroundColor = originalColors.circle3;
-    circle4.style.backgroundColor = originalColors.circle4;
-}); */
+btn.addEventListener('click', function () {
+    // Restaura los colores iniciales
+    circle1.style.backgroundColor = initialState.circle1;
+    circle2.style.backgroundColor = initialState.circle2;
+    circle3.style.backgroundColor = initialState.circle3;
+    circle4.style.backgroundColor = initialState.circle4;
+});
 
 
 // EJERCICIO 8
