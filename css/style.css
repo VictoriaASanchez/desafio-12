@@ -1,0 +1,84 @@
+@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(210, 210, 210);
+    text-align: center;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+span {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+p {
+    margin: 3rem 0 2rem 0;
+}
+
+select {
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #F188A6;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #4A3D73;
+    cursor: pointer;
+}
+
+.circle-container {
+    display: grid;
+    place-items: center;
+    margin-top: 4rem;
+}
+
+#circle-1 {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+#circle-2 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+#circle-3 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+#circle-4 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+#circle-1, #circle-2, #circle-3, #circle-4 {
+    border-radius: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #D2D2D2;
+}
