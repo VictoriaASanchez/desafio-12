@@ -12,13 +12,13 @@ title.appendChild(createSpan);
 
 const arrayColors = [
     {name: 'Violeta', color: '#4A3D73'},
-    {name: 'Lila', color: '#8475B3'},
+    {name: 'Lila oscuro', color: '#8475B3'},
+    {name: 'Lila claro', color: '#F2EEFF'},
     {name: 'Rosa', color: '#F188A6'},
-    {name: 'Blanco', color: '#F2EEFF'}
 ];
 
-/* const arrayColors = ['#4A3D73', '#8475B3', '#F188A6', '#F2EEFF',];
-console.log(arrayColors); */
+const colors = arrayColors.map(color => color.color);
+console.log(colors);
 
 const select = document.getElementById('colors');
 
@@ -27,13 +27,12 @@ select.addEventListener('change', () => {
   console.log(selectedColor);
 });
 
-for(var i = 0; i < arrayColors.length; i++) {
-    var opt = arrayColors[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}
+arrayColors.forEach(color => {
+    const option = document.createElement('option');
+    option.value = color.name;
+    option.textContent = color.name;
+    select.appendChild(option);
+  });
 
 
 // EJERCICIO 5
@@ -61,11 +60,11 @@ const input = document.querySelector('input');
 
 input.addEventListener('change', () => {
     if (input.checked) {
-        console.log('checkbox está seleccionado');
+        console.log('Checkbox está seleccionado');
     }
 });
 
-// ------------------------------
+//
 
 circle1.addEventListener('click', () => {
     fondo(circle1);
@@ -97,23 +96,23 @@ circle4.addEventListener('click', () => {
 
 const fondo = (circle) => {
     switch (select.value) {
-        case 'violeta':
-            circle.style.backgroundColor = arrayColors[0];
+        case 'Violeta':
+            circle.style.backgroundColor = colors[0];
             break;
-        case 'lila':
-            circle.style.backgroundColor = arrayColors[1];
+        case 'Lila oscuro':
+            circle.style.backgroundColor = colors[1];
             break;
-        case 'rosa':
-            circle.style.backgroundColor = arrayColors[2];
+        case 'Lila claro':
+            circle.style.backgroundColor = colors[2];
             break;
-        case 'blanco':
-            circle.style.backgroundColor = arrayColors[3];
+        case 'Rosa':
+            circle.style.backgroundColor = colors[3];
             break;
         default:
+            circle.style.backgroundColor = colors[4];
             break;
     }
 }
-
 
 // Button 'Reset'
 
@@ -148,10 +147,7 @@ const changeResolution = () => {
     }
 }
 
-// Agregar un listener para el evento de cambio de tamaño de la ventana
 window.addEventListener('resize', changeResolution);
 
-// Llamar a la función inicialmente para verificar el tamaño de pantalla actual
 changeResolution();
-
 
