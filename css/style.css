@@ -3,13 +3,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(210, 210, 210);
+    background-color: white;
     text-align: center;
     font-size: 16px;
 }
 
 h1 {
     font-family: 'Cabinet Grotesk', sans-serif;
+    color: #001959;
 }
 
 span {
@@ -20,19 +21,30 @@ span {
 }
 
 p {
-    margin: 3rem 0 2rem 0;
+    margin: 2rem 0 1rem 0;
+    color: #001959;
 }
 
 select {
     display: block;
     margin: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 2rem;
+}
+
+input {
+    margin: 0;
+}
+    
+label::after {
+    content: 'Modo superpuesto';
+    color: black;
+    font-size: 0.75rem;
 }
 
 button {
     display: block;
     margin: auto;
-    margin-top: 1rem;
     border-radius: 2rem;
     border: none;
     background-color: #F188A6;
@@ -49,7 +61,7 @@ button:hover {
 .circle-container {
     display: grid;
     place-items: center;
-    margin-top: 4rem;
+    margin: 2rem 0 2rem 0;
 }
 
 #circle-1 {
@@ -80,5 +92,32 @@ button:hover {
     border-radius: 100%;
     border: 1px solid black;
     cursor: pointer;
-    background-color: #D2D2D2;
+    background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 500px) {
+
+    #circle-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    #circle-2 {
+        width: 220px;
+        height: 220px;
+    }
+
+    #circle-3 {
+        width: 140px;
+        height: 140px;
+    }
+
+    #circle-4 {
+        width: 60px;
+        height: 60px;
+    }
+    
+    label::after {
+    color: #6D6D6D;
+}
 }
